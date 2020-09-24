@@ -3,7 +3,7 @@
 
 Desarrollo de un software para la recogida y análisis de datos subjetivos por parte de los distintos deportistas que lo utilicen, enfocado, por ahora, al fútbol.
 
-Estos datos subjetivos deben poder ampliarse, adaptándose a las necesidades de cada equipo de preparación física que lo utilice. En principio, los dos tipos de datos que se recogerán (los futbolistas rellenarán una especie de formulario en la que indiquen su percepción subjetiva), son dos:
+Estos datos subjetivos deben poder ampliarse, adaptándose a las necesidades de cada equipo de preparación física que lo utilice. En principio, los dos tipos de datos que se recogerán (los futbolistas rellenarán una especie de formulario en la que indiquen su percepción subjetiva), son:
 
 ##### Wellness
 * Cada mañana, el jugador indicará su percepción acerca de distintos aspectos como la calidad del sueño, la fatiga acumulada, el daño muscular, la hidratación, la nutrición, etc.
