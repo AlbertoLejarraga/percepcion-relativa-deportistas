@@ -10,4 +10,4 @@ Estos datos subjetivos deben poder ampliarse, adaptándose a las necesidades de 
 * [Información sobre wellness en futoblistas](https://barcainnovationhub.com/the-use-of-wellness-questionnaires-in-football/)
 ##### RPE (Rated Perceived Exertion)
 * Tras cada sesión, el jugador debe indicar su percepción acerca del esfuerzo percibido en la sesión, según una escala de 0 a 10.
-* [Información sobre RPE en futbolistas] (https://barcainnovationhub.com/es/influencia-percepcion-del-esfuerzo-sobre-el-entrenamiento-y-la-competicion-en-el-futbol/)
+* [Información sobre RPE en futbolistas](https://barcainnovationhub.com/es/influencia-percepcion-del-esfuerzo-sobre-el-entrenamiento-y-la-competicion-en-el-futbol/)
