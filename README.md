@@ -1,5 +1,8 @@
 # percepcion-relativa-deportistas
-## Aplicación para el análisis de los datos de percepción relativa (de esfuerzo y bienestar general, principalmente) de cada deportista
+
+## Descripción
+
+### Aplicación para el análisis de los datos de percepción relativa (de esfuerzo y bienestar general, principalmente) de cada deportista
 
 Desarrollo de un software para la recogida y análisis de datos subjetivos por parte de los distintos deportistas que lo utilicen, enfocado, por ahora, al fútbol.
 
@@ -11,3 +14,6 @@ Estos datos subjetivos deben poder ampliarse, adaptándose a las necesidades de 
 ##### RPE (Rated Perceived Exertion)
 * Tras cada sesión, el jugador debe indicar su percepción acerca del esfuerzo percibido en la sesión, según una escala de 0 a 10.
 * [Información sobre RPE en futbolistas](https://barcainnovationhub.com/es/influencia-percepcion-del-esfuerzo-sobre-el-entrenamiento-y-la-competicion-en-el-futbol/)
+
+## Documentación
+Los ficheros sobre la configuración de github se encuentran en la carpeta [docs](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs)
