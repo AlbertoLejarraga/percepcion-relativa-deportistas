@@ -19,14 +19,9 @@ Estos datos subjetivos deben poder ampliarse, adaptándose a las necesidades de 
 Los ficheros sobre la configuración de github se encuentran en la carpeta [docs](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs)
 
 ## Historias de usuario
-[x] [HU1: Obtener listado de encuestas wellness de un determinado día](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/4)
-
-[ ] [HU2: Obtener datos de encuestas wellness de un jugador en toda la temporada](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/5)
-
-[ ] [HU3: Obtener listado de encuestas RPE realizadas en una determinada sesión](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/6)
-
-[ ] [HU4: Obtener los datos de las encuestas RPE de un jugador a lo largo de la temporada](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/7)
-
-[ ] [HU5: Rellenar encuesta RPE](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/8)
-
-[ ] [HU6: Rellenar encuesta wellness](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/9)
+- [ ] [HU1: Obtener listado de encuestas wellness de un determinado día](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/4)
+- [ ] [HU2: Obtener datos de encuestas wellness de un jugador en toda la temporada](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/5)
+- [ ] [HU3: Obtener listado de encuestas RPE realizadas en una determinada sesión](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/6)
+- [ ] [HU4: Obtener los datos de las encuestas RPE de un jugador a lo largo de la temporada](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/7)
+- [ ] [HU5: Rellenar encuesta RPE](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/8)
+- [ ] [HU6: Rellenar encuesta wellness](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/9)
