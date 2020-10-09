@@ -16,7 +16,9 @@ Estos datos subjetivos deben poder ampliarse, adaptándose a las necesidades de 
 * [Información sobre RPE en futbolistas](https://barcainnovationhub.com/es/influencia-percepcion-del-esfuerzo-sobre-el-entrenamiento-y-la-competicion-en-el-futbol/)
 
 ## Documentación
-Los ficheros sobre la configuración de github se encuentran en la carpeta [docs](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs)
+- [Configuración de git](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs)
+- [Explicación de las herramientas elegidas](#)
+- [Pasos seguidos en el proyecto](#)
 
 ## Historias de usuario
 - [ ] [HU1: Obtener listado de encuestas wellness de un determinado día](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/4)
@@ -25,3 +27,6 @@ Los ficheros sobre la configuración de github se encuentran en la carpeta [docs
 - [ ] [HU4: Obtener los datos de las encuestas RPE de un jugador a lo largo de la temporada](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/7)
 - [ ] [HU5: Rellenar encuesta RPE](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/8)
 - [ ] [HU6: Rellenar encuesta wellness](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/9)
+
+## Autor
+Alberto Lejárraga Rubio 
