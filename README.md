@@ -17,8 +17,8 @@ Estos datos subjetivos deben poder ampliarse, adaptándose a las necesidades de 
 
 ## Documentación
 - [Configuración de git](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs)
-- [Explicación de las herramientas elegidas](#)
-- [Pasos seguidos en el proyecto](#)
+- [Explicación de las herramientas elegidas](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/herramientas.md)
+- [Pasos seguidos en el proyecto](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/pasos.md)
 
 ## Historias de usuario
 - [ ] [HU1: Obtener listado de encuestas wellness de un determinado día](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/4)
