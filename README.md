@@ -28,5 +28,9 @@ Estos datos subjetivos deben poder ampliarse, adaptándose a las necesidades de 
 - [ ] [HU5: Rellenar encuesta RPE](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/8)
 - [ ] [HU6: Rellenar encuesta wellness](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/9)
 
+## Código
+- [Clase Rpe](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/blob/master/src/rpe.js)
+- [Clase Wellness](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/blob/master/src/wellness.js)
+- [Resto de ficheros fuente](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/src)
 ## Autor
-Alberto Lejárraga Rubio 
+Alberto Lejárraga Rubio
