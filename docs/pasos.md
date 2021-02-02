@@ -10,3 +10,5 @@ Además, se ha empezado a utilizar los issues. A lo largo del hito se han ido ab
 También se ha declarado como issue las distintas historias de usuario previstas para el proyecto y detalladas [aquí](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues)
 
 En cuanto a la creación de alguna clase, se han creado las clases Wellness y RPE, cuyos objetos contendrán lo relativo a las encuestas rellenadas por los futbolistas en cada momento del día, lo cual puede consultarse en [la sección de código del repositorio](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/src)
+
+Para la entrega en la evaluación extraordinaria, siguiendo los comentarios de la evaluación del hito 1 durante la evaluación ordinaria, se han modificado estas clases incluyendo métodos relativos a las historias de usuario.
