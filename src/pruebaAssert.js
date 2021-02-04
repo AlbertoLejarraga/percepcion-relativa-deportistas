@@ -6,6 +6,7 @@ assert(rpeTest, "Nuevo rpe")
 assert.equal(rpeTest.idJugador, "12345678A", "prueba idJugador")
 assert.equal(rpeTest.fecha, "2021-02-04", "prueba fecha")
 console.log("Tests correctos")
+//ahora se fuerza que haya un fallo en el test
 rpeTest.fecha = null
 console.log("El siguiente debe fallar")
 assert.equal(rpeTest.as_string(), `{idJugador: 12345678A, fecha: 2021-02-0, turno: diurno, valor: 5}`)
