@@ -14,15 +14,17 @@
     "url": "git+https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas.git"
   },
   "keywords": [
-    "[rpe",
+    "rpe",
     "wellness",
     "deporte",
-    "futbol]"
+    "futbol"
   ],
   "author": "\"Alberto Lejárraga Rubio <alejarragar@correo.ugr.es> (https://github.com/AlbertoLejarraga)",
   "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues"
   },
-  "homepage": "https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas#readme"
+  "homepage": "https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas#readme",
+  "dependencies": {},
+  "engines": {"node": ">=14.15.0"}
 }
