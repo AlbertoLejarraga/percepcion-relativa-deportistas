@@ -21,14 +21,14 @@ class Rpe{
 		this._turno = turno
 	}
 	set valor (valor){
-		this._valor = valorRPE
+		this._valor = valor
 	}
 	as_string(){
 		return `{idJugador: ${this.idJugador}, fecha: ${this.fecha}, turno: ${this.turno}, valor: ${this.valor}}`
 	}
 	//HU5: Rellenar encuesta
 	rellenarEncuesta(idJugador, turno, valorRPE){
-		if (turno !== "m" || turno !== "t" || valorRPE<1 || valorRPE>10 || idJugador === ""){
+		if ((turno !== "m" && turno !== "t") || (valorRPE < 1 || valorRPE > 10) || idJugador === ""){
 			return false
 		}else{
 			this.idJugador = idJugador
