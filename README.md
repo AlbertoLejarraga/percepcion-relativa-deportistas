@@ -21,6 +21,7 @@ Estos datos subjetivos deben poder ampliarse, adaptándose a las necesidades de 
 - [Pasos seguidos en el proyecto](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/pasos.md)
 
 ## Historias de usuario
+Aquí aparece el [listado](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues?q=is%3Aopen+is%3Aissue+label%3Auser-stories)
 - [ ] [HU1: Obtener listado de encuestas wellness de un determinado día](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/4)
 - [ ] [HU2: Obtener datos de encuestas wellness de un jugador en toda la temporada](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/5)
 - [ ] [HU3: Obtener listado de encuestas RPE realizadas en una determinada sesión](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/6)
@@ -28,9 +29,16 @@ Estos datos subjetivos deben poder ampliarse, adaptándose a las necesidades de 
 - [ ] [HU5: Rellenar encuesta RPE](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/8)
 - [ ] [HU6: Rellenar encuesta wellness](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/9)
 
+## Issues
+Los [issues cerrados](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues?q=is%3Aissue+is%3Aclosed) y los [milestones](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/milestones) se pueden consultar en estos enlaces.
+
 ## Código
 - [Clase Rpe](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/blob/master/src/rpe.js)
 - [Clase Wellness](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/blob/master/src/wellness.js)
 - [Resto de ficheros fuente](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/src)
+
+## Documentación
+En la [carpeta docs](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/) aparece toda la documentación explicativa del proyecto, así como de los distintos [pasos](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/pasos.md) realizados y las [herramientas](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/herramientas.md) utilizadas en su desarrollo.
+
 ## Autor
 Alberto Lejárraga Rubio
