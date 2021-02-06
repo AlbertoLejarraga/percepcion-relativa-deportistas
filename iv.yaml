@@ -1,3 +1,7 @@
 entidad:
     - src/wellness.js
     - src/rpe.js
+lenguaje: Node.js
+test:
+  - tests/principal.js
+taskfile: package.json
