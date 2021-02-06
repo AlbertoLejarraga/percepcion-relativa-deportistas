@@ -1,9 +1,9 @@
 class Rpe{
-	constructor (idJugador, fecha, turno, valorRPE){
-		this._idJugador = idJugador
-		this._fecha = fecha
-		this._turno = turno
-		this._valor = valorRPE
+	constructor (){
+		this._idJugador = ""
+		this._fecha = new Date()
+		this._turno = "" //m o t, mañana o tarde
+		this._valor = -1
 	}
 	//getters
 	get idJugador (){return this._idJugador}
@@ -27,11 +27,21 @@ class Rpe{
 		return `{idJugador: ${this.idJugador}, fecha: ${this.fecha}, turno: ${this.turno}, valor: ${this.valor}}`
 	}
 	//HU5: Rellenar encuesta
-	rellenarEncuesta(idJugador, turno, valorRPE){}
+	rellenarEncuesta(idJugador, turno, valorRPE){
+		if (turno !== "m" || turno !== "t" || valorRPE<1 || valorRPE>10 || idJugador === ""){
+			return false
+		}else{
+			this.idJugador = idJugador
+			this.fecha = new Date(Date.now());
+			this.turno = turno
+			this.valor = valorRPE
+			return true
+		}
+	}
 	//HU4: Obtener las encuestas de un jugador de la temporada
-	obtenerEncuestasJugador(idJugador){}
+	obtenerEncuestasJugador(idJugador){}//implica conexión a bbdd
 	//HU3: Obtener las encuestas de todos los jugadores de una sesión concreta
-	obtenerEncuestasDia(fecha, turno){}
+	obtenerEncuestasDia(fecha, turno){}//implica conexión a bbdd
 
 
 }
