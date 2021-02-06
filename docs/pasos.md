@@ -12,3 +12,20 @@ También se ha declarado como issue las distintas historias de usuario previstas
 En cuanto a la creación de alguna clase, se han creado las clases Wellness y RPE, cuyos objetos contendrán lo relativo a las encuestas rellenadas por los futbolistas en cada momento del día, lo cual puede consultarse en [la sección de código del repositorio](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/src)
 
 Para la entrega en la evaluación extraordinaria, siguiendo los comentarios de la evaluación del hito 1 durante la evaluación ordinaria, se han modificado estas clases incluyendo métodos relativos a las historias de usuario.
+
+## Hito 2: Tests
+En este hito se trata de automatizar las tareas para el despliegue de la aplicación. Tanto en lo relativo a las librerías necesarias para su instalación, utilizando un fichero [package.json](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/blob/master/package.json), como para, y principalmente en este hito, la ejecución de tests al código.
+
+Para esta automatización de tareas se ha decidido utilizar grant, mientras que para la ejecución de test se ha utilizado el framework Mocha, junto con Chai como librería de aserciones, tal como se detalla en el fichero de [herramientas](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/herramientas.md)
+
+Para pasar todos los test, se han incluido las dependencias en el package.json y se han instalado con "npm install", para después poder utilizar las utilidades en el proyecto.
+
+Se han completado, tras esto, las clases del proyecto, Rpe y Wellness, que están en los ficheros que aparecen en [este directorio](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/src). Entre los métodos desarrollados, están los relativos a las historias de usuario 5 y 6, aunque no se han marcado como "closed" por no estar disponibles aún, más allá de su uso en terminal.
+
+Después de esto, se ha generado el [fichero Gruntfile.js](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/blob/master/Gruntfile.js), donde se detallan los test unitarios que deben pasar las funciones a desarrollar.
+
+Se han ejecutado los test sobre el código desarrollado (directamente con el comando "grunt" o con "npm test") y se han detectado distintos fallos, que se han corregido antes de subir todo al repositorio.
+
+Todos estos pasos han ido cerrando issues del milestone "Hito 2", como puede observarse [aquí](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22Hito+2%22).
+
+Por último, decir que en este último enlace se puede comprobar que no se ha seguido realmente el proceso de desarrollo TDD, tal como se ha explicado en este fichero, pues primero se ha hecho el código y después el fichero de test. Quizás en siguientes hitos debería invertir este proceso y empezar con los test antes de desarrollar el código en sí, para conocer de primera mano si me aporta algo en el desarollo de software o no.
