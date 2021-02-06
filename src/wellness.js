@@ -58,3 +58,6 @@ class Wellness {
 	//HU1: Obtener las encuestas de todos los jugadores de un día concreto
 	obtenerEncuestasDia(fecha){}
 }
+module.exports = {
+	Wellness
+}
