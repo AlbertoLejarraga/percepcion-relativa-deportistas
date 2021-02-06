@@ -20,12 +20,12 @@ class Wellness {
 	get estadoEmocional(){return this._valorEmocional}
 	//setters
 	set fecha(fecha){this._fecha = fecha}
-	set idJugador(idJug){this._idJugador = idJugador}
-	set fatiga(valor){this._valorFatiga = fatiga}
-	set danoMuscular(valor){this._valorDanoMuscular = danoMuscular}
-	set calidadSueno(valor){this._valorSueno = calidadSueno}
-	set nutricionHidratacion(valor){this._valorNutricion = nutricionHidratacion}
-	set estadoEmocional(valor){this._valorEmocional = estadoEmocional}
+	set idJugador(idJug){this._idJugador = idJug}
+	set fatiga(valor){this._valorFatiga = valor}
+	set danoMuscular(valor){this._valorDanoMuscular = valor}
+	set calidadSueno(valor){this._valorSueno = valor}
+	set nutricionHidratacion(valor){this._valorNutricion = valor}
+	set estadoEmocional(valor){this._valorEmocional = valor}
 
 	as_string(){
 		return `{idJugador: ${this.idJugador},
@@ -39,17 +39,20 @@ class Wellness {
 	//HU6: Rellenar encuesta
 	rellenarEncuesta(idJugador, fatiga, danoMuscular, calidadSueno, nutricionHidratacion, estadoEmocional){
 		if (idJugador === "" ||
-									fatiga < 1 || fatiga > 7 ||
-									danoMuscular < 1 || fatiga > 7 ||
-									calidadSueno < 1 || calidadSueno > 7 ||
-									nutricionHidratacion < 1 || nutricionHidratacion > 7 ||
-									estadoEmocional < 1 || estadoEmocional > 7){
+									(fatiga < 1 || fatiga > 7) ||
+									(danoMuscular < 1 || danoMuscular > 7) ||
+									(calidadSueno < 1 || calidadSueno > 7) ||
+									(nutricionHidratacion < 1 || nutricionHidratacion > 7) ||
+									(estadoEmocional < 1 || estadoEmocional > 7)){
 			return false
 		}else{
 			this.idJugador = idJugador
 			this.fecha = new Date(Date.now());
-			this.turno = turno
-			this.valor = valorRPE
+			this.fatiga = fatiga
+			this.danoMuscular = danoMuscular
+			this.calidadSueno = calidadSueno
+			this.nutricionHidratacion = nutricionHidratacion
+			this.estadoEmocional = estadoEmocional
 			return true
 		}
 	}
