@@ -1,5 +1,5 @@
 # Selección de una imagen para la realización de test
-Para la realización de los test, se utilizará un contenedor de podman que ejecute el [fichero de test]() desarrollado en el [Hito 2](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/milestone/2?closed=1). Este contenedor tendrá que estar basado en una imagen que contenga nodejs, siendo múltiples las opciones. Debido a que los test se pasarán cada vez que se avance en el proyecto, la decisión de elegir una u otra imagen será crítica, pues se utilizará el contenedor para pasar dichos tests y su rendimiento debe ser el mejor posible.
+Para la realización de los test, se utilizará un contenedor de podman que ejecute el [fichero de test](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/blob/master/tests/principal.js) desarrollado en el [Hito 2](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/milestone/2?closed=1). Este contenedor tendrá que estar basado en una imagen que contenga nodejs, siendo múltiples las opciones. Debido a que los test se pasarán cada vez que se avance en el proyecto, la decisión de elegir una u otra imagen será crítica, pues se utilizará el contenedor para pasar dichos tests y su rendimiento debe ser el mejor posible.
 
 Las imagenes probadas son las siguientes:
 
