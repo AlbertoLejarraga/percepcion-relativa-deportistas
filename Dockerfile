@@ -1,11 +1,24 @@
-FROM node:14.15-buster
+#ultima imagen de Alpine
+FROM alpine:latest
 
+#Label con la versión actual y mi correo
 LABEL version="1.0.0" maintainer="alejarragar@correo.ugr.es"
 
-ADD package.json package.json
+#se crea la carpeta proyecto y se añade nodejs (y npm)
+RUN mkdir /proyecto \
+&& apk add nodejs \
+&& apk add --update npm
 
-RUN npm install .
+#se pasan los ficheros del host al contenedor
+COPY ./ /proyecto
 
-ADD . .
+#se instalan las dependecias en base al package.json, optimizando la instalación para reducir el tamaño del contenedor
+RUN cd /proyecto \
+&& npm install . --only=production \
+&& npm cache clean --force
 
+#se determina la ruta desde la que lanzar el comando cmd
+WORKDIR /proyecto
+
+#se determina el comando a lanzar al hacer run de la imagen (se lanza el test)
 CMD ["npm", "test"]
