@@ -29,3 +29,12 @@ Se han ejecutado los test sobre el código desarrollado (directamente con el com
 Todos estos pasos han ido cerrando issues del milestone "Hito 2", como puede observarse [aquí](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22Hito+2%22).
 
 Por último, decir que en este último enlace se puede comprobar que no se ha seguido realmente el proceso de desarrollo TDD, tal como se ha explicado en este fichero, pues primero se ha hecho el código y después el fichero de test. Quizás en siguientes hitos debería invertir este proceso y empezar con los test antes de desarrollar el código en sí, para conocer de primera mano si me aporta algo en el desarollo de software o no.
+
+## Hito 3: Contenedores
+En este hito se "contenedoriza" la ejecución de los tests desarrollados en el hito anterior, es decir, se genera un contenedor que tenga todo lo necesario para ejecutar los tests sobre el código del repositorio.
+
+Para ello, se utiliza la herramienta de gestión de contenedores Podman, tal como se explica, junto con el resto de herramientas del proyecto, en el [fichero de herramientas](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/herramientas.md). Para instalarlo, se siguen las instrucciones de [su página oficial](https://podman.io/getting-started/installation).
+
+Tras esto, se han ido probando distintas imágenes para la ejecución de los tests, por lo que era necesario que - bien porque la imagen contuviera, o bien porque se instalara mediante el Dockerfile - estuviera presente NodeJS. Todo lo relativo a esta elección de la imagen definitiva puede encontrarse [aquí](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/eleccionImagenDockerTest/README.md).
+
+Una vez modelada la imagen del contenedor que ejecute los tests sobre el repositorio con un Dockerfile, se ha desplegado el proyecto en dos servicios de imágenes de contenedores, DockerHub y Quay.io. La configuración del primero de ellos se detalla en [esta documentación](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/despliegueDockerHub/README.md), mientras que sobre Quay.io, se explica en el fichero de herramientas antes enlazado que, en principio, no lo voy a seguir utilizando, por parecerme una mejor opción DockerHub, pese a estar funcionando para descargar la imagen de igual forma.
