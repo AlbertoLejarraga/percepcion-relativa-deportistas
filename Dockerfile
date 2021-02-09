@@ -1,16 +1,11 @@
-FROM alpine:latest
+FROM node
+
 LABEL version="1.0.0" maintainer="alejarragar@correo.ugr.es"
 
-RUN mkdir /proyecto \
-&& apk add nodejs \
-&& apk add --update npm \
-&& adduser -S node
+ADD package.json package.json
 
-COPY ./ /proyecto
+RUN npm install .
 
-RUN cd /proyecto \
-&& npm install . --only=production && npm cache clean --force
-
-WORKDIR /proyecto
+ADD . .
 
 CMD ["npm", "test"]
