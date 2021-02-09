@@ -14,7 +14,7 @@ COPY ./ /proyecto
 
 #se instalan las dependecias en base al package.json, optimizando la instalación para reducir el tamaño del contenedor
 RUN cd /proyecto \
-&& npm install . --only=production \
+&& npm install . \
 && npm cache clean --force
 
 #se determina la ruta desde la que lanzar el comando cmd
