@@ -19,6 +19,9 @@ Estos datos subjetivos deben poder ampliarse, adaptándose a las necesidades de 
 - [Configuración de git](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs)
 - [Explicación de las herramientas elegidas](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/herramientas.md)
 - [Pasos seguidos en el proyecto](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/pasos.md)
+- [Despliegue en DockerHub](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/despliegueDockerHub/README.md)
+- [Justificación de elección de imagen Docker](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/eleccionImagenDockerTest/README.md)
+- [Buenas prácticas al hacer el Dockerfile](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/buenasPracticasDocker.md)
 
 ## Historias de usuario
 Aquí aparece el [listado](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues?q=is%3Aopen+is%3Aissue+label%3Auser-stories)
