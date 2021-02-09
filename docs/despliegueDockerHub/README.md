@@ -1,7 +1,7 @@
 # Subida de la imagen a DockerHub
 
 ## Creación de cuenta y link con github
-En primer lugar se crea una cuenta en DockerHub. Pese a que en los requisitos del hito se especifica que el nombre de docker y github debe ser el mismo, mi nombre de github contiene mayúsculas, por lo que se crea el fichero [DOCKER_USER](*************) con el nombre.
+En primer lugar se crea una cuenta en DockerHub. Pese a que en los requisitos del hito se especifica que el nombre de docker y github debe ser el mismo, mi nombre de github contiene mayúsculas, por lo que se crea el fichero [DOCKER_USER](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/blob/master/DOCKER_USER) con el nombre.
 
 Tras esto, se deben asociar las cuentas de ambos servicios como se puede ver a continuación:
 

@@ -32,7 +32,7 @@ En este caso, la imagen está basada en la versión 10 de Debian.
 
 
 ### node:buster-slim
-En este caso, la imagen está basada en la versión 10 de Debian.
+En este caso, la imagen se basa en la misma versión anterior pero, en principio, con un menor tamaño.
 [Este](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/blob/271aa8bd8ad1da2841cb6f5d8aa04e65f08ed887/Dockerfile) es el Dockerfile utilizado. Su tiempo de ejecución y su tamaño son los siguientes:
 
 ![buster-slim](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/blob/master/docs/eleccionImagenDockerTest/img/node-buster-slim.png)
