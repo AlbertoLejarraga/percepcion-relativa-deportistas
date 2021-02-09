@@ -1,4 +1,4 @@
-FROM node:14.15-alpine
+FROM node:14.15-buster
 
 LABEL version="1.0.0" maintainer="alejarragar@correo.ugr.es"
 
