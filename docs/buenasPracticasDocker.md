@@ -13,3 +13,7 @@ En el desarrollo del Dockerfile se ha tratado de seguir la [documentación ofici
 4. Buscar la imagen más pequeña posible
 
   Como se ha detallado [aquí](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/eleccionImagenDockerTest/README.md), se ha tratado de buscar la imagen mas pequeña posible en tamaño.
+
+5. Usar root cuando sea necesario
+
+  Se debe ejecutar como root lo que sea necesario. Por ejemplo, la ejecución de tests puede hacerse sin esos privilegios, como se ha hecho en el Dockerfile final con la inclusión de un usuario "node".
