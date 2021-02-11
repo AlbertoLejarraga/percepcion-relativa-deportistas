@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/AlbertoLejarraga/percepcion-relativa-deportistas.svg?branch=master)](https://travis-ci.com/AlbertoLejarraga/percepcion-relativa-deportistas)
 # percepcion-relativa-deportistas
 
 ## Descripción
