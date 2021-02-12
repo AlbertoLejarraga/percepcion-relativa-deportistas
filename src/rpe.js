@@ -24,10 +24,10 @@ class Rpe{
 		this._valor = valor
 	}
 	as_string(){
-		return `{idJugador: ${this.idJugador}, fecha: ${this.fecha}, turno: ${this.turno}, valor: ${this.valor}}`
+		return `{idJugador: ${this.idJugador}, fecha: ${this.fecha.toLocaleTimeString('es-ES', {year: 'numeric', month: 'numeric', day: 'numeric' })}, turno: ${this.turno}, valor: ${this.valor}}`
 	}
 	as_dict(){
-		return {idJugador: this.idJugador, fecha: this.fecha, turno: this.turno, valor: this.valor}
+		return {idJugador: this.idJugador, fecha: this.fecha.toLocaleTimeString('es-ES', {year: 'numeric', month: 'numeric', day: 'numeric' }), turno: this.turno, valor: this.valor}
 	}
 	//HU5: Rellenar encuesta
 	rellenarEncuesta(idJugador, fecha, turno, valorRPE){
@@ -41,6 +41,9 @@ class Rpe{
 			return true
 		}
 	}
+	get [Symbol.toStringTag]() {
+    return 'Rpe';
+  }
 }
 
 module.exports = {

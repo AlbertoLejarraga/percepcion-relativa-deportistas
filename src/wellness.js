@@ -37,7 +37,7 @@ class Wellness {
 							estado_emocional: ${this._valorEmocional}}`
 	}
 	as_dict(){
-		return {idJugador: this.idJugador, fecha: this.fecha, fatiga: this.fatiga, dano_muscular: this.danoMuscular, calidad_sueno: this.calidadSueno, nutricion_hidratacion: this.nutricionHidratacion, estado_emocional: this.estadoEmocional}
+		return {idJugador: this.idJugador, fecha: this.fecha.toLocaleTimeString('es-ES', {year: 'numeric', month: 'numeric', day: 'numeric' }), fatiga: this.fatiga, dano_muscular: this.danoMuscular, calidad_sueno: this.calidadSueno, nutricion_hidratacion: this.nutricionHidratacion, estado_emocional: this.estadoEmocional}
 	}
 	//HU6: Rellenar encuesta
 	rellenarEncuesta(idJugador, fecha, fatiga, danoMuscular, calidadSueno, nutricionHidratacion, estadoEmocional){
@@ -60,6 +60,9 @@ class Wellness {
 			return true
 		}
 	}
+	get [Symbol.toStringTag]() {
+    return 'Wellness';
+  }
 }
 module.exports = {
 	Wellness
