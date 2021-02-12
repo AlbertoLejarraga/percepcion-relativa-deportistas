@@ -26,24 +26,21 @@ class Rpe{
 	as_string(){
 		return `{idJugador: ${this.idJugador}, fecha: ${this.fecha}, turno: ${this.turno}, valor: ${this.valor}}`
 	}
+	as_dict(){
+		return {idJugador: this.idJugador, fecha: this.fecha, turno: this.turno, valor: this.valor}
+	}
 	//HU5: Rellenar encuesta
-	rellenarEncuesta(idJugador, turno, valorRPE){
-		if ((turno !== "m" && turno !== "t") || (valorRPE < 1 || valorRPE > 10) || idJugador === ""){
+	rellenarEncuesta(idJugador, fecha, turno, valorRPE){
+		if ((turno !== "m" && turno !== "t") || (valorRPE < 1 || valorRPE > 10) || idJugador === "" || ! fecha instanceof Date || isNaN(fecha)){
 			return false
 		}else{
 			this.idJugador = idJugador
-			this.fecha = new Date(Date.now());
+			this.fecha = fecha;
 			this.turno = turno
 			this.valor = valorRPE
 			return true
 		}
 	}
-	//HU4: Obtener las encuestas de un jugador de la temporada
-	obtenerEncuestasJugador(idJugador){}//implica conexión a bbdd
-	//HU3: Obtener las encuestas de todos los jugadores de una sesión concreta
-	obtenerEncuestasDia(fecha, turno){}//implica conexión a bbdd
-
-
 }
 
 module.exports = {
