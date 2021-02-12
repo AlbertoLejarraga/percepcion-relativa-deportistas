@@ -15,4 +15,4 @@ Se crea un repositorio de DockerHub, que está conectado con el repositorio de g
 ## Vista pública del repositorio
 Hecho esto, cada push a github, actualiza [el de DockerHub](https://hub.docker.com/r/albertolejarraga/percepcion-relativa-deportistas). A continuación muestro la vista de gestión del repositorio para demostrar que el proceso se ha hecho correctamente (los errores que aparecen en las build han sido porque el dockerfile que había al principio en el repositorio era erróneo):
 
-![build-correcta](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/blob/master/docs/despliegueDockerHub/img/repo-link.png)
+![build-correcta](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/blob/master/docs/despliegueDockerHub/img/build-correcta.png)
