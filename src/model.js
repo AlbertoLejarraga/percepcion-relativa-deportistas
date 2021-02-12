@@ -49,5 +49,6 @@ class Model{
     //Fnción que añade una encuesta a la bbdd
     // de momento siempre correcto
     return true
+    
   }
 }

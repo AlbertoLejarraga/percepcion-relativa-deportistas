@@ -36,9 +36,13 @@ class Wellness {
 							nutrición-hidratación: ${this._valorNutricion},
 							estado_emocional: ${this._valorEmocional}}`
 	}
+	as_dict(){
+		return {idJugador: this.idJugador, fecha: this.fecha, fatiga: this.fatiga, dano_muscular: this.danoMuscular, calidad_sueno: this.calidadSueno, nutricion_hidratacion: this.nutricionHidratacion, estado_emocional: this.estadoEmocional}
+	}
 	//HU6: Rellenar encuesta
-	rellenarEncuesta(idJugador, fatiga, danoMuscular, calidadSueno, nutricionHidratacion, estadoEmocional){
+	rellenarEncuesta(idJugador, fecha, fatiga, danoMuscular, calidadSueno, nutricionHidratacion, estadoEmocional){
 		if (idJugador === "" ||
+									! fecha instanceof Date || isNaN(fecha) ||
 									(fatiga < 1 || fatiga > 7) ||
 									(danoMuscular < 1 || danoMuscular > 7) ||
 									(calidadSueno < 1 || calidadSueno > 7) ||
@@ -47,7 +51,7 @@ class Wellness {
 			return false
 		}else{
 			this.idJugador = idJugador
-			this.fecha = new Date(Date.now());
+			this.fecha = fecha;
 			this.fatiga = fatiga
 			this.danoMuscular = danoMuscular
 			this.calidadSueno = calidadSueno
@@ -56,10 +60,6 @@ class Wellness {
 			return true
 		}
 	}
-	//HU2: Obtener las encuestas de un jugador de la temporada
-	obtenerEncuestasJugador(idJugador){}
-	//HU1: Obtener las encuestas de todos los jugadores de un día concreto
-	obtenerEncuestasDia(fecha){}
 }
 module.exports = {
 	Wellness

@@ -75,4 +75,5 @@ class gestorEncuestas{
       return "datos erroneos"
     }
   }
+  
 }
