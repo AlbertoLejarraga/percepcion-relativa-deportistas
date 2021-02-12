@@ -10,12 +10,12 @@ class Model{
   obtenerRPETotal(idJugador, limite){
     //se obtiene de la bbdd todas las encuestas del jugador, con un límite de registros
     //de momento aleatorio
-    encuestas = []
+    let encuestas = []
     for(let i=0; i<limite;i++){
-      fecha = str(2018 + Math.floor(Math.random() * 3)) + str(Math.floor(Math.random() * 12) + 1) + str(Math.floor(Math.random() * 30) + 1)
-      turno = ((Math.random() < 0.5) ? "m":"t")
-      valor = Math.floor(Math.random() * 10) + 1
-      encuestas.push({idJugador:idJugador, fecha:fecha, turno:turno, valor:valor})
+      let fecha = (2018 + Math.floor(Math.random() * 3)).toString() + "/" +(Math.floor(Math.random() * 12) + 1).toString() + "/" + (Math.floor(Math.random() * 28) + 1).toString()
+      let turno = ((Math.random() < 0.5) ? "m":"t")
+      let valor = Math.floor(Math.random() * 10) + 1
+      encuestas.push({idJugador:idJugador, fecha:new Date(fecha), turno:turno, valor:valor})
     }
     return encuestas
   }
@@ -27,19 +27,19 @@ class Model{
   obtenerWellnessDia(idJugador, fecha){
     //se obtiene de la bbdd los valroes para ese jugador y fecha
     //de momento valores aleatorios
-    rand = []
+    let rand = []
     for (let i=0;i<5;i++) rand.push(Math.floor(Math.random() * 7) + 1)
-    wellness = {fatiga: rand[0], dano_muscular: rand[1], calidad_sueno: rand[2], nutricion_hidratacion: rand[3], estado_emocional: rand[4]}
+    let wellness = {fatiga: rand[0], dano_muscular: rand[1], calidad_sueno: rand[2], nutricion_hidratacion: rand[3], estado_emocional: rand[4]}
 
     return wellness
   }
   obtenerWellnessTotal(idJugador, limite){
     //se obtiene de la bbdd todas las encuestas del jugador, con un límite de registros
     //de momento aleatorio
-    encuestas = []
+    let encuestas = []
     for(let i=0; i<limite;i++){
-      fecha = str(2018 + Math.floor(Math.random() * 3)) + str(Math.floor(Math.random() * 12) + 1) + str(Math.floor(Math.random() * 30) + 1)
-      rand = []
+      let fecha = (2018 + Math.floor(Math.random() * 3)).toString() + "/" + (Math.floor(Math.random() * 12) + 1).toString() + "/" + (Math.floor(Math.random() * 30) + 1).toString()
+      let rand = []
       for (let i=0;i<5;i++) rand.push(Math.floor(Math.random() * 7) + 1)
       encuestas.push({idJugador:idJugador, fecha:fecha, fatiga: rand[0], dano_muscular: rand[1], calidad_sueno: rand[2], nutricion_hidratacion: rand[3], estado_emocional: rand[4]})
     }
@@ -49,6 +49,9 @@ class Model{
     //Fnción que añade una encuesta a la bbdd
     // de momento siempre correcto
     return true
-    
+
   }
+}
+module.exports = {
+	Model
 }
