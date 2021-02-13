@@ -27,7 +27,7 @@ describe('RPE', function(){
     });
     it('Devuelve false al poner un valor mayor de 10', function(){
       r = rpeTest.rellenarEncuesta("123456", new Date(), "m", 11)
-      expect(r).to.be.true;
+      expect(r).to.be.false;
     });
     it('Devuelve un objecto correcto al pasar valores correctos', function(){
       r = rpeTest.rellenarEncuesta("123456", new Date(), "m", 5)

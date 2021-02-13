@@ -39,6 +39,8 @@ jobs:
           tags: albertolejarraga/percepcion-relativa-deportistas:latest
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
+      - name: Push
+        run: docker push albertolejarraga/percepcion-relativa-deportistas:latest
 
 #https://github.com/docker/build-push-action
 #https://docs.docker.com/ci-cd/github-actions/
