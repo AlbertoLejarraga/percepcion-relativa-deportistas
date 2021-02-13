@@ -27,4 +27,4 @@ RUN cd /proyecto \
 WORKDIR /proyecto
 
 #se determina el comando a lanzar al hacer run de la imagen (se lanza el test)
-CMD ["npm", "test;", "echo", "holaaaa"]
+CMD ["npm", "test"]
