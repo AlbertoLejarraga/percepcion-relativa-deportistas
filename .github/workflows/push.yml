@@ -1,5 +1,5 @@
 on: push
-name: build y test a partir del contenedor
+name: build y test a partir del dockerfile
 jobs:
   test-docker-container:
     runs-on: ubuntu-latest
