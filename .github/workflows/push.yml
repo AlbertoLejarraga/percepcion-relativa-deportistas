@@ -3,16 +3,18 @@ name: test, build y subida a DockerHub
 jobs:
   build-publish:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x, 11.x, 12.x, 13.x, 14.x, 15.x]
     steps:
-      - uses: actions/checkout@master
-      - name: npm install
-        uses: actions/npm@master
+      - uses: actions/checkout@v2
+      - name: Uso de Node.js ${{ matrix.node-version}}
+        uses: actions/setup-node@v1
         with:
-          args: install
-      - name: npm test
-        uses: actions/npm@master
-        with:
-          args: run test
+          node-version: ${{ matrix.node-version}}
+      - run: npm install
+      - run: npm test
+      
       - name: docker build
         uses: actions/docker/cli@master
         with:
