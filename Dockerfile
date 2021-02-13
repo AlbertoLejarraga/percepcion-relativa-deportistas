@@ -11,7 +11,7 @@ RUN mkdir /proyecto \
 && adduser -S node
 
 #se pasan los ficheros del host al contenedor
-COPY . .
+COPY ./ /proyecto
 
 #se modifican los permisos del fichero y se cambia al usuario creado
 RUN chown -R node /proyecto
