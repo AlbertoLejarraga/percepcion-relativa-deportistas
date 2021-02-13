@@ -39,6 +39,8 @@ Los [issues cerrados](https://github.com/AlbertoLejarraga/percepcion-relativa-de
 ## Código
 - [Clase Rpe](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/blob/master/src/rpe.js)
 - [Clase Wellness](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/blob/master/src/wellness.js)
+- [Clase GestorEncuestas](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/blob/master/src/gestorEncuestas.js)
+- [Clase del modelo](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/blob/master/src/model.js)
 - [Resto de ficheros fuente](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/src)
 - [Ficheros de test](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/tests)
 
