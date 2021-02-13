@@ -7,5 +7,5 @@ jobs:
       #checkout del repo para poder acceder a él en el fichero
       - uses: actions/checkout@v2
       #se buildea y corre el contenedor generado con ./Dockerfile
-      - run: docker build -t containertest .
-      - run: docker run containertest
+      - run: podman build -t containertest .
+      - run: podman run containertest
