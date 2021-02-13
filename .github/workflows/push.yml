@@ -13,9 +13,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version}}
-      - run: docker build -t containerTest .
-      - run: docker run containerTest
-      
+      - run: docker build -t containertest .
+      - run: docker run containertest
+
 
 #https://github.com/docker/build-push-action
 #https://docs.docker.com/ci-cd/github-actions/
