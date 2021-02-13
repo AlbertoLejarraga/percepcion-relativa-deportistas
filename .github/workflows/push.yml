@@ -1,0 +1,28 @@
+on: push
+name: test, build y subida a DockerHub
+jobs:
+  build-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: npm install
+        uses: actions/npm@master
+        with:
+          args: install
+      - name: npm test
+        uses: actions/npm@master
+        with:
+          args: run test
+      - name: docker build
+        uses: actions/docker/cli@master
+        with:
+          args: build -t albertolejarraga/percepcion-relativa-deportistas .
+      - name: docker login
+        uses: actions/docker/login@master
+        env:
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+          DOCKER_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
+      - name: docker push
+        uses: actions/docker/cli@master
+        with:
+          args: push albertolejarraga/percepcion-relativa-deportistas
