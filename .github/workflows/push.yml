@@ -3,9 +3,6 @@ name: test, build y subida a DockerHub
 jobs:
   build-publish:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [4.x, 11.x, 12.x, 13.x, 14.x, 15.x]
     steps:
       #configuración de node
       - uses: actions/checkout@v2
