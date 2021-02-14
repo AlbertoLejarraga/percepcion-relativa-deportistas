@@ -25,7 +25,9 @@
     "url": "https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues"
   },
   "homepage": "https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas#readme",
-  "dependencies": {},
+  "dependencies": {
+    "firebase": "^8.2.7"
+  },
   "engines": {
     "node": ">=14.15.0"
   },
