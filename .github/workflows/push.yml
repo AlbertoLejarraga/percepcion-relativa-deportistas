@@ -6,8 +6,8 @@ jobs:
     steps:
       #checkout del repo para poder acceder a él en el fichero
       - uses: actions/checkout@v2
-      - env:
-        MONGODB_URI: ${{ secrets.MONGODB_URI }}
       #se buildea y corre el contenedor generado con ./Dockerfile
       - run: podman build -t containertest .
+        env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
       - run: podman run containertest
