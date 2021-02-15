@@ -3,22 +3,26 @@ var wellness = require('./wellness.js')
 var model = require('./model.js')
 class GestorEncuestas{
   constructor (){
+
+  }
+  async init(){
     this._model = new model.Model()
+    await this._model.conectar()
   }
   get [Symbol.toStringTag]() {
     return 'GestorEncuestas';
   }
   ////////////////////////////////////////////// RPE /////////////////////////////////////
   //HU3: rpe de un día
-  obtenerRPESesion(idJugador, fecha, turno="m"){
+  async obtenerRPESesion(idJugador, fecha, turno="m"){
     //A partir del idJugador, la fecha y el turno se realiza una conexión a la bbdd para obtener la encuesta de esa sesion
     //se comprueba que la fecha y el turno sean correctos
     let f = new Date(fecha)
     if (! fecha instanceof Date || isNaN(f) || (turno !== "m" && turno !== "t")){
       return "Fecha o turno incorrectos"
     }
-    let rpeSesion = this._model.obtenerRPESesion(idJugador, fecha, turno)
-    if (rpeSesion !== {}){
+    let rpeSesion = await this._model.obtenerRPESesion(idJugador, fecha, turno)
+    if (rpeSesion != null){
       let r = new rpe.Rpe()
       r.rellenarEncuesta(idJugador, fecha, turno, rpeSesion)
       return r

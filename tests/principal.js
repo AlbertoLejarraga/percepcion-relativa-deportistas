@@ -129,6 +129,7 @@ describe('Wellness', function(){
 
 var gestorTest = new gestorEncuestas.GestorEncuestas()
 
+
 describe('Gestor de encuestas', function(){
   describe('Creación de objeto', function(){
     it('Genera un objeto', function(){
@@ -136,16 +137,17 @@ describe('Gestor de encuestas', function(){
     });
   });
   describe('Obtener RPE de sesión', function(){
-    it('Devuelve una string de error al insertar una fecha errónea', function(){
-      r = gestorTest.obtenerRPESesion("123456", "asdf", "m");
+    it('Devuelve una string de error al insertar una fecha errónea', async function(){
+      await gestorTest.init()
+      r = await gestorTest.obtenerRPESesion("123456", "asdf", "m");
       expect(r).to.be.equal('Fecha o turno incorrectos');
     });
-    it('Devuelve una string de error al insertar un turno erróneo', function(){
-      r = gestorTest.obtenerRPESesion("123456", new Date(), "h")
+    it('Devuelve una string de error al insertar un turno erróneo', async function(){
+      r = await gestorTest.obtenerRPESesion("123456", new Date(), "h")
       expect(r).to.be.equal('Fecha o turno incorrectos');
     });
-    it('Devuelve un objeto de tipo rpe al insertar datos correctos', function(){
-      r = gestorTest.obtenerRPESesion("123456", new Date(), "t")
+    it('Devuelve un objeto de tipo rpe al insertar datos correctos', async function(){
+      r = await gestorTest.obtenerRPESesion("123456", new Date("2021-02-15"), "m")
       expect(r).to.be.a("Rpe").but.not.an('object');
     });
     //Faltaría  un check al recibir de la bbdd un vacío, pero no esta todavía la bd

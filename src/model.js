@@ -1,12 +1,59 @@
+const url = require('url')
+const mongoClient = require('mongodb').MongoClient
+const env = require('dotenv').config();
 class Model{
   constructor(){
-    this._conexion = ""
+    this._db = null
   }
-  obtenerRPESesion(idJugador, fecha, turno){
+
+  async conectar(){
+    let uri = process.env.MONGODB_URI
+    let client = await mongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true  })
+    this._db = await client.db(url.parse(uri).pathname.substr(1))
+
+  }
+  async obtenerRPESesion(idJugador, fecha, turno){
     //se obtiene de la bbdd el valor para ese jugador, fecha y turno
     //de momento un aleatorio
-    return Math.floor(Math.random() * 10) + 1
+    //https://stackoverflow.com/questions/48717323/nodejs-mongodb-querying-iso-date/63298056#63298056
+    let rpe = await this._db.collection("rpe")
+    let valor = await rpe.aggregate(
+      [
+        {
+          '$addFields': {
+            'formattedDate': {
+              '$dateToString': {
+                'format': '%Y-%m-%d',
+                'date': '$fecha'
+              }
+            }
+          }
+        }, {
+          '$match': {
+            'formattedDate': {
+              '$eq': fecha.toISOString().split("T")[0]
+            },
+            'turno': turno,
+            'id_jugador': idJugador
+          }
+        }, {
+          '$project': {
+            'valor': 1,
+            '_id': 0
+          }
+        }, {
+          '$limit': 1
+        }
+      ]
+  )
+  if (await valor.hasNext()){
+    let v = await valor.next()
+    return v["valor"]
+  }else{
+    return false
   }
+
+}
   obtenerRPETotal(idJugador, limite){
     //se obtiene de la bbdd todas las encuestas del jugador, con un límite de registros
     //de momento aleatorio
