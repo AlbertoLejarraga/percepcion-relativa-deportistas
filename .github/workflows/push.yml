@@ -3,11 +3,11 @@ name: build y test a partir del dockerfile
 jobs:
   test-docker-container:
     runs-on: ubuntu-latest
-    env:
-      MONGODB_URI: ${{ secrets.MONGODB_URI }}
     steps:
       #checkout del repo para poder acceder a él en el fichero
       - uses: actions/checkout@v2
+      - env:
+        MONGODB_URI: ${{ secrets.MONGODB_URI }}
       #se buildea y corre el contenedor generado con ./Dockerfile
       - run: podman build -t containertest .
       - run: podman run containertest
