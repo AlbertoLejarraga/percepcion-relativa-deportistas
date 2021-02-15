@@ -9,3 +9,5 @@ node_js:
 install:
   - npm install .
 script: npm test
+env:
+- MONGODB_URI=$MONGODB_URI
