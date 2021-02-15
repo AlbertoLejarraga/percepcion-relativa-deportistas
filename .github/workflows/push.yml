@@ -3,6 +3,8 @@ name: build y test a partir del dockerfile
 jobs:
   test-docker-container:
     runs-on: ubuntu-latest
+    env:
+      MONGODB_URI: ${{ secrets.MONGODB_URI }}
     steps:
       #checkout del repo para poder acceder a él en el fichero
       - uses: actions/checkout@v2
