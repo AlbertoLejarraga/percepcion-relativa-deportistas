@@ -14,7 +14,7 @@ module.exports = async (req, res) => {
        rpeResul = await gestor.obtenerRPESesion(req.query.idJugador, new Date(req.query.fecha))
     }
     //el resultado es el objecto como diccionario
-    resul = await ((Object.prototype.toString.call(rpeResul) == "Rpe") ? rpeResul.as_dict() : rpeResul);
+    resul = await ( Object.prototype.toString.call(rpeResul) === "[object Rpe]" ? rpeResul.as_dict() : rpeResul);
   }
   await res.status(200).json(resul)
 }
