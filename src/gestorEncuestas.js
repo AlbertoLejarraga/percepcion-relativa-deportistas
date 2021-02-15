@@ -21,10 +21,10 @@ class GestorEncuestas{
     if (! fecha instanceof Date || isNaN(f) || (turno !== "m" && turno !== "t")){
       return "Fecha o turno incorrectos"
     }
-    let rpeSesion = await this._model.obtenerRPESesion(idJugador, fecha, turno)
-    if (rpeSesion != null){
+    let rpeSesion = await this._model.obtenerRPESesion(idJugador, f, turno)
+    if (rpeSesion){
       let r = new rpe.Rpe()
-      r.rellenarEncuesta(idJugador, fecha, turno, rpeSesion)
+      r.rellenarEncuesta(idJugador, f, turno, rpeSesion)
       return r
     }else{
       return "No existe encuesta para ese jugador/día/turno"

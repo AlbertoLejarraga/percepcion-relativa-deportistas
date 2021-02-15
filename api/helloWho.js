@@ -1,6 +1,6 @@
 module.exports = (req, res) => {
   let who = 'anonymous'
-
+  
   if (req.body && req.body.who) {
     who = req.body.who
   } else if (req.query.who) {
