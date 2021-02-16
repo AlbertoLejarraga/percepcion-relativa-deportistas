@@ -50,7 +50,7 @@ Estos son los enlaces a herramientas y pasos utilizados hito a hito:
   - Hito 1: [herramientas](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/herramientas.md#hito-1) y [pasos](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/pasos.md#hito-1-estructura-general-del-proyecto)
   - Hito 2: [herramientas](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/herramientas.md#hito-2) y [pasos](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/pasos.md#hito-2-tests)
   - Hito 3: [herramientas](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/herramientas.md#hito-3) y [pasos](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/pasos.md#hito-3-contenedores)
-  - Hito 4: [herramientas](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/herramientas.md#hito-4) y [pasos](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/pasos.md#hito-4-integracion-continua)
+  - Hito 4: [herramientas](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/herramientas.md#hito-4) y [pasos](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/pasos.md#hito-4-integración-continua)
   - Hito 5: [herramientas](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/herramientas.md#hito-5) y [pasos](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/pasos.md#hito-5-funciones-serverless)
 
 ## Autor
