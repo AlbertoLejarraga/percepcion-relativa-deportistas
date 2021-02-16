@@ -4,7 +4,8 @@ exports.handler = async function(event, context) {
   var gestor = new gestorEncuestas.GestorEncuestas()
   await gestor.init()
   let body = {}
-  if (event.body !== ""){
+  console.log(typeof event.body)
+  if (event.body[0] ==="{"){
     body = JSON.parse(event.body)
   }
   let idJugador = event.queryStringParameters.idJugador || body.idJugador
