@@ -5,15 +5,21 @@ exports.handler = async function(event, context) {
   await gestor.init()
   let body = {}
   console.log(typeof event.body)
+  let idJugador, turno, rpeSesion
   if (event.body[0] ==="{"){
     body = JSON.parse(event.body)
+    idJugador = body.idJugador
+    turno = body.turno || "m"
+    rpeSesion = parseInt(body.rpeSesion)
+  }else{
+    idJugador = event.queryStringParameters.idJugador
+    turno = event.queryStringParameters.turno || "m"
+    rpeSesion = parseInt(event.queryStringParameters.rpeSesion)
   }
-  let idJugador = event.queryStringParameters.idJugador || body.idJugador
-  let turno = event.queryStringParameters.turno || body.turno || "m"
-  let rpeSesion = parseInt(event.queryStringParameters.rpeSesion) || parseInt(body.rpeSesion)
   let fecha = new Date()
   let resul = "Los campos idJugador y rpeSesion son obligatorios"
   console.log(event.queryStringParameters)
+  console.log("jejeje", idJugador, turno, rpeSesion)
   if (idJugador && rpeSesion){
     console.log("dentroooo")
     resul = await gestor.nuevoRPE(idJugador, fecha, turno, rpeSesion)
