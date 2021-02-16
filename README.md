@@ -33,6 +33,8 @@ Aquí aparece el [listado](https://github.com/AlbertoLejarraga/percepcion-relati
 - [ ] [HU4: Obtener los datos de las encuestas RPE de un jugador a lo largo de la temporada](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/7)
 - [ ] [HU5: Rellenar encuesta RPE](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/8)
 - [ ] [HU6: Rellenar encuesta wellness](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/9)
+- [ ] [HU7: Borrar encuesta rpe](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/44)
+- [ ] [HU8: Borrar encuesta wellness](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/45)
 
 ## Issues
 Los [issues cerrados](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues?q=is%3Aissue+is%3Aclosed) y los [milestones](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/milestones) se pueden consultar en estos enlaces.
