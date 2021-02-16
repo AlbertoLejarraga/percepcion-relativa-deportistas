@@ -2,42 +2,38 @@ const env = require('dotenv').config();
 const axios = require('axios')
 
 var TelegramBot = require('node-telegram-bot-api'),
-    // Be sure to replace YOUR_BOT_TOKEN with your actual bot token on this line.
     telegram = new TelegramBot(process.env.TELEGRAM_BOT_TOKEN, { polling: true });
 
 telegram.on("text", (message) => {
+  //para nuevo rpe
   if (message.text.toLowerCase().indexOf("/nuevorpe") === 0){
     //se obtiene los datos
     let idJugador = message.from.id.toString()
     let rpeSesion = parseInt(message.text.split(" ")[1])
     let fecha = new Date()
     let turno = message.text.split(" ")[2] || "m"
+    //si se cumplen restricciones de datos
     if (idJugador && rpeSesion>0 && rpeSesion<=10 && (turno === "m" || turno === "t")){
-      //si hay datos se hace la peticion rest
-      let rpe = JSON.stringify({idJugador:idJugador, rpeSesion: rpeSesion, turno:turno})
-      telegram.sendMessage(message.chat.id, rpe)
-
+      //se genera la petición post a la serverless de netlify
       axios.post("https://percepcion-relativa-deportistas.netlify.app/.netlify/functions/nuevoRpe",
         {idJugador: idJugador, rpeSesion: rpeSesion, turno: turno}
       )
-        .then(res => {
+        .then(res => {//se devuelve la respuesta
           console.log(res)
           telegram.sendMessage(message.chat.id, res.data)
         })
         .catch(error => {
           console.error(error)
         })
-      telegram.sendMessage(message.chat.id, "ON fin")
-
     }else{
       telegram.sendMessage(message.chat.id, "Algún dato es erróneo, consulta /ayuda")
     }
-  } else if (message.text.toLowerCase().indexOf("/rpesesion") === 0){
+  } else if (message.text.toLowerCase().indexOf("/rpesesion") === 0){//para consulta de rpe de una sesión
     //se obtiene los datos
     let fecha = message.text.split(" ")[1]
     let turno = message.text.split(" ")[2] || "m"
     let idJugador = message.text.split(" ")[3] || message.from.id.toString()
-    //si hay datos se hace la peticion rest
+    //si hay datos se hace la peticion get
     var params = `idJugador=${idJugador}&fecha=${fecha}&turno=${turno}`
     axios({
       method: 'get',
@@ -49,7 +45,7 @@ telegram.on("text", (message) => {
       .catch(error => {
         console.error(error)
       })
-  }else if (message.text.toLowerCase().indexOf("/ayuda") === 0){
+  }else{//en cualquier otro caso se devuelve la ayuda
     let ayuda = "/rpesesion <fecha en formato yyyy/mm/dd> <opcional turno(m-t), por defecto m> <idJugador, opcional, si no se aporta se coge el id de telegram>\n"
     ayuda += "/nuevorpe <rpe de la sesión> <turno (m-t), por defecto m>\n"
     ayuda += "Los valores opcionales deben ir en el orden indicado.\n"
