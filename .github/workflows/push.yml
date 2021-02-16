@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v2
       #se buildea y corre el contenedor generado con ./Dockerfile
       - runs:
-        using: 'podman'
+        uses: 'podman'
         image: 'Dockerfile'
         env:
           MONGODB_URI: ${{ secrets.MONGODB_URI }}
