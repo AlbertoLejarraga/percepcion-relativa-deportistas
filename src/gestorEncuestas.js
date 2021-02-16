@@ -24,7 +24,7 @@ class GestorEncuestas{
     let rpeSesion = await this._model.obtenerRPESesion(idJugador, f, turno)
     if (rpeSesion){
       let r = new rpe.Rpe()
-      r.rellenarEncuesta(idJugador, f, turno, rpeSesion)
+      r.rellenarEncuesta(idJugador, rpeSesion["fecha"], turno, rpeSesion["valor"])
       return r
     }else{
       return "No existe encuesta para ese jugador/día/turno"

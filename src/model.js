@@ -39,6 +39,7 @@ class Model{
         }, {
           '$project': {
             'valor': 1,
+            'fecha':1,
             '_id': 0
           }
         }, {
@@ -48,7 +49,7 @@ class Model{
   )
   if (await valor.hasNext()){
     let v = await valor.next()
-    return v["valor"]
+    return {"valor": v["valor"], "fecha": v["fecha"]}
   }else{
     return false
   }
