@@ -3,7 +3,7 @@ const rpe = require("../../src/rpe.js")
 exports.handler = async function(event, context) {
   var gestor = new gestorEncuestas.GestorEncuestas()
   await gestor.init()
-  let body = JSON.parse(event.body)
+  let body = JSON.parse(event.body) || {}
   let idJugador = event.queryStringParameters.idJugador || body.idJugador
   let turno = event.queryStringParameters.turno || body.turno || "m"
   let rpeSesion = parseInt(event.queryStringParameters.rpeSesion) || parseInt(body.rpeSesion)
