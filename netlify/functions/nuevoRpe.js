@@ -3,9 +3,10 @@ const rpe = require("../../src/rpe.js")
 exports.handler = async function(event, context) {
   var gestor = new gestorEncuestas.GestorEncuestas()
   await gestor.init()
-  let idJugador = event.queryStringParameters.idJugador
-  let turno = event.queryStringParameters.turno || "m"
-  let rpeSesion = parseInt(event.queryStringParameters.rpeSesion)
+  let body = JSON.parse(event.body)
+  let idJugador = event.queryStringParameters.idJugador || body.idJugador
+  let turno = event.queryStringParameters.turno || body.turno || "m"
+  let rpeSesion = parseInt(event.queryStringParameters.rpeSesion) || parseInt(body.rpeSesion)
   let fecha = new Date()
   let resul = "Los campos idJugador y rpeSesion son obligatorios"
   console.log(event.queryStringParameters)
