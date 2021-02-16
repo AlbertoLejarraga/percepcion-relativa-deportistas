@@ -5,9 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       #checkout del repo para poder acceder a él en el fichero
-      - uses: actions/checkout@v2
+      - name: Checkout del repo
+        uses: actions/checkout@v2
       #se buildea y corre el contenedor generado con ./Dockerfile
-      - run: podman build -t containertest .
+      - name: Build y run del contenedor
         env:
           MONGODB_URI: ${{ secrets.MONGODB_URI }}
-      - run: podman run containertest
+        run: podman build -t containertest .
+        run: podman run containertest
