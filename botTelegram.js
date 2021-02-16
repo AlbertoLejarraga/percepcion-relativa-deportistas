@@ -18,9 +18,10 @@ telegram.on("text", (message) => {
       telegram.sendMessage(message.chat.id, rpe)
 
       axios.post("https://percepcion-relativa-deportistas.netlify.app/.netlify/functions/nuevoRpe",
-        {'idJugador':idJugador, 'rpeSesion': rpeSesion, 'turno':turno}
+        {idJugador: idJugador, rpeSesion: rpeSesion, turno: turno}
       )
         .then(res => {
+          console.log(res)
           telegram.sendMessage(message.chat.id, res.data)
         })
         .catch(error => {
