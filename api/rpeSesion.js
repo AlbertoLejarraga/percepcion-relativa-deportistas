@@ -1,3 +1,6 @@
+/* Función que se corresponde con la historia de usuario:
+HU3: Obtener listado de encuestas RPE realizadas en una determinada sesión #6
+*/
 const gestorEncuestas = require("../src/gestorEncuestas.js")
 const rpe = require("../src/rpe.js")
 module.exports = async (req, res) => {

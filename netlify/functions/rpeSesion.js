@@ -1,3 +1,6 @@
+/* Función que se corresponde con la historia de usuario:
+HU5: Rellenar encuesta RPE #8
+*/
 const gestorEncuestas = require("../../src/gestorEncuestas.js")
 const rpe = require("../../src/rpe.js")
 exports.handler = async function(event, context) {
