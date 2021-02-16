@@ -163,16 +163,16 @@ describe('Gestor de encuestas', function(){
       expect(r).to.have.lengthOf.at.most(5);
     });
   });
-  describe('Añadir RPE', function(){
-    it('Devuelve una string de error al insertar una fecha o turno erróneos', function(){
-      r = gestorTest.nuevoRPE("123456", new Date(), "h", 7)
+  describe('Añadir RPE', async function(){
+    it('Devuelve una string de error al insertar una fecha o turno erróneos', async function(){
+      r = await gestorTest.nuevoRPE("123456", new Date(), "h", 7)
       expect(r).to.be.equal('Fecha o turno incorrectos');
-      r = gestorTest.nuevoRPE("123456", "asdf", "m", 7)
+      r = await gestorTest.nuevoRPE("123456", "asdf", "m", 7)
       expect(r).to.be.equal('Fecha o turno incorrectos');
     });
-    it('Devuelve un objeto booleano al insertar datos correctos', function(){
-      r = gestorTest.nuevoRPE("123456", new Date(), "m", 7)
-      expect(r).to.be.a("boolean");
+    it('Devuelve un objeto booleano al insertar datos correctos', async function(){
+      r = await gestorTest.nuevoRPE("123456", new Date(), "m", 7)
+      expect(r).to.be.an("object");
     });
   });
   describe('Obtener Wellness de día concreto', function(){

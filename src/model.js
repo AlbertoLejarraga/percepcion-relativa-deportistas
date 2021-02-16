@@ -71,7 +71,7 @@ class Model{
     //Función que añade una encuesta a la bbdd
     let rpe = await this._db.collection("rpe")
     let resul = await rpe.insertOne(dicc)
-    if (resul.insertedCount === 1){
+    if (await resul.insertedCount === 1){
       return dicc
     }else{
       return "No se ha insertado el documento"
