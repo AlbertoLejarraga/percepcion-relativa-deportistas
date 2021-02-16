@@ -21,7 +21,7 @@ exports.handler = async function(event, context) {
     //el resultado es el objecto como diccionario
     resul = await ( Object.prototype.toString.call(rpeResul) === "[object Rpe]" ? rpeResul.as_dict() : rpeResul);
   }
-  return {
+  return {//Se devuelve el resultado o -1
     statusCode: 200,
     body: JSON.stringify(resul)
   }
