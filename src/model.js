@@ -12,6 +12,7 @@ class Model{
     this._db = await client.db(url.parse(uri).pathname.substr(1))
 
   }
+  //HU3: rpe de un día
   async obtenerRPESesion(idJugador, fecha, turno){
     //se obtiene de la bbdd el valor para ese jugador, fecha y turno
     //de momento un aleatorio
@@ -67,6 +68,8 @@ class Model{
     }
     return encuestas
   }
+  //HU5: Rellenar encuesta rpe
+
   async addRpe(dicc){
     //Función que añade una encuesta a la bbdd
     let rpe = await this._db.collection("rpe")
