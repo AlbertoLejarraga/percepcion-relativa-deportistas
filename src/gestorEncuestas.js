@@ -43,11 +43,14 @@ class GestorEncuestas{
     return encuestas
   }
   //HU5: Rellenar encuesta rpe
-  nuevoRPE(idJugador, fecha, turno, rpeSesion){
+  async nuevoRPE(idJugador, fecha, turno, rpeSesion){
     if ( fecha instanceof Date && ! isNaN(fecha) && (turno === "m" || turno === "t") && (rpeSesion >= 1 || rpeSesion <= 10)){
       let encuesta = new rpe.Rpe()
       encuesta.rellenarEncuesta(idJugador, fecha, turno, rpeSesion)
-      return this._model.addRpe(encuesta.as_dict())
+      let dict = encuesta.as_dict()
+      dict["fecha"] = fecha
+      console.log(dict)
+      return await this._model.addRpe(dict)
     }
     return "Fecha o turno incorrectos"
   }

@@ -34,7 +34,7 @@ class Model{
               '$eq': fecha.toISOString().split("T")[0]
             },
             'turno': turno,
-            'id_jugador': idJugador
+            'idJugador': idJugador
           }
         }, {
           '$project': {
@@ -67,10 +67,16 @@ class Model{
     }
     return encuestas
   }
-  addRpe(dicc){
+  async addRpe(dicc){
     //Función que añade una encuesta a la bbdd
-    // de momento siempre correcto
-    return true
+    let rpe = await this._db.collection("rpe")
+    let resul = await rpe.insertOne(dicc)
+    if (resul.insertedCount === 1){
+      return dicc
+    }else{
+      return "No se ha insertado el documento"
+    }
+
   }
   obtenerWellnessDia(idJugador, fecha){
     //se obtiene de la bbdd los valroes para ese jugador y fecha
