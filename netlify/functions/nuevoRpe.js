@@ -8,6 +8,7 @@ exports.handler = async function(event, context) {
   let rpeSesion = parseInt(event.queryStringParameters.rpeSesion)
   let fecha = new Date()
   let resul = "Los campos idJugador y rpeSesion son obligatorios"
+  console.log(event.queryStringParameters)
   if (idJugador && rpeSesion){
     console.log("dentroooo")
     resul = await gestor.nuevoRPE(idJugador, fecha, turno, rpeSesion)

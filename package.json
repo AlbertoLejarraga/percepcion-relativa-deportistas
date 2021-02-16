@@ -7,7 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "grunt"
+    "test": "grunt",
+    "bot": "node botTelegram.js"
   },
   "repository": {
     "type": "git",
@@ -26,9 +27,11 @@
   },
   "homepage": "https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "mongodb": "^3.6.4",
-    "netlify-lambda": "^2.0.3"
+    "netlify-lambda": "^2.0.3",
+    "node-telegram-bot-api": "^0.51.0"
   },
   "engines": {
     "node": ">=14.15.0"
