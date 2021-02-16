@@ -1,7 +1,7 @@
 const gestorEncuestas = require("../src/gestorEncuestas.js")
 const rpe = require("../src/rpe.js")
 module.exports = async (req, res) => {
-
+  // se obtiene el gestor
   var gestor = new gestorEncuestas.GestorEncuestas()
   await gestor.init()
   let resul = -1
@@ -16,5 +16,6 @@ module.exports = async (req, res) => {
     //el resultado es el objecto como diccionario
     resul = await ( Object.prototype.toString.call(rpeResul) === "[object Rpe]" ? rpeResul.as_dict() : rpeResul);
   }
+  //se devuelve el resultado que se haya obtenido o -1
   await res.status(200).json(resul)
 }
