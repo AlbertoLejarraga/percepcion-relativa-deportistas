@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/AlbertoLejarraga/percepcion-relativa-deportistas.svg?branch=master)](https://travis-ci.com/AlbertoLejarraga/percepcion-relativa-deportistas)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ddacdded-300f-4463-b0ad-47c860444158/deploy-status)](https://app.netlify.com/sites/percepcion-relativa-deportistas/deploys)
 # percepcion-relativa-deportistas
 
 ## Descripción
