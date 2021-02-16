@@ -13,4 +13,4 @@ jobs:
       - name: Run del contenedor
         env:
           MONGODB_URI: ${{ secrets.MONGODB_URI }}
-        run: podman run containertest
+        run: podman run --env '"MONGODB_URI": ${{ secrets.MONGODB_URI }}' containertest
