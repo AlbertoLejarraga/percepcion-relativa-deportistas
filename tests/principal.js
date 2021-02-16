@@ -210,3 +210,33 @@ describe('Gestor de encuestas', function(){
     });
   });
 });
+var model = require('../src/model.js')
+var modelTest = null
+describe('Clase model', function(){
+  describe('Conexión a la bbdd', function(){
+    modelTest = new model.Model()
+    it('No devuelve una excepción', async function(){
+      expect(await modelTest.conectar()).to.be.equal(undefined);
+    });
+  });
+  describe('Obtener rpe', function(){
+    it('Devuelve false con turno incorrecto',  async function(){
+      var datos = await modelTest.obtenerRPESesion("123456", new Date(), "j")
+      expect(datos).to.not.be.true;
+    });
+    it('Devuelve false para un dato que no esté en la bd', async function(){
+      var datos = await modelTest.obtenerRPESesion("5555", new Date(), "m")
+      expect(datos).to.not.be.true;
+    });
+    it('Devuelve un diccionario para un dato que esté en la bd', async function(){
+      var datos = await modelTest.obtenerRPESesion("123456", new Date("2021/02/16"), "m")
+      expect(datos).to.be.an("object");
+    });
+  });
+  describe('Añadir rpe de sesión', function(){
+    it('Devuelve un diccionario al pasar un diccionario',  async function(){
+      var add = await modelTest.addRpe({idJugador:"9999", fecha: new Date(), turno: "j"})
+      expect(add).to.not.be.equal({idJugador:"9999", fecha: new Date(), turno: "j"});
+    });
+  });
+});
