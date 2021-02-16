@@ -46,6 +46,8 @@ Los [issues cerrados](https://github.com/AlbertoLejarraga/percepcion-relativa-de
 
 ## Documentación
 En la [carpeta docs](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/) aparece toda la documentación explicativa del proyecto, así como de los distintos [pasos](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/pasos.md) realizados y las [herramientas](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/herramientas.md) utilizadas en su desarrollo.
+Estos son los enlaces a herramientas y pasos utilizados hito a hito:
+  - Hito 1: [herramientas](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/herramientas.md#hito-1) y [pasos](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/pasos.md#hito-1-estructura-general-del-proyecto)
 
 ## Autor
 Alberto Lejárraga Rubio
