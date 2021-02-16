@@ -8,9 +8,8 @@ jobs:
       - name: Checkout del repo
         uses: actions/checkout@v2
       #se buildea y corre el contenedor generado con ./Dockerfile
-      - name: Build del contenedor
-        run: podman build -t containertest .
-      - name: Run del contenedor
+      - runs:
+        using: 'podman'
+        image: 'Dockerfile'
         env:
           MONGODB_URI: ${{ secrets.MONGODB_URI }}
-        run: podman run --env '"MONGODB_URI": ${{ secrets.MONGODB_URI }}' containertest
