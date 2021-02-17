@@ -92,8 +92,15 @@ Estas funciones son accesibles desde estos enlaces:
   - [rpeSesion](https://percepcion-relativa-deportistas.netlify.app/.netlify/functions/rpeSesion?idJugador=123456&fecha=2021/02/16) con parámetros idJugador y fecha
   - [nuevoRpe](https://percepcion-relativa-deportistas.netlify.app/.netlify/functions/nuevoRpe) con parámetros de inserción pasados por POST.
 
+En cuanto a estos dos servicios, se han testeado las correspondientes a las historias de usuario (la de rpeSesion de netlify no, al considerarse solo de prueba).
 
 ### Telegram
+El servicio de mensajería telegram permite desplegar bots que realicen ciertas funciones. En este caso, se ha utilizado como un sistema que permita acceder a las funciones serverless desarrolladas con las dos tecnologías anteriores. Para ello se han seguido una serie de pasos que pueden encontrarse en [esta documentación](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/blob/master/docs/botTelegram/README.md).
 
+Debo decir, que el bot se ejecuta en local y que no se ha desplegado en la nube, para lo cual habría que configurarlo en modo webhook (el servidor del bot recibiría una request cada vez que se mande un mensaje) en vez de en modo polling (cada "x" tiempo el servidor pregunta si ha habido un nuevo mensaje), además de que estuviera alojado en un servidor visible en internet. Esta opción de polling en vez de webhook se comenta más bien por términos de eficiencia y de reducción de costes, ya que el servidor se activaría solo cuando recibe una llamada y no con polling que debe estar constantemente preguntando.
 
 ### Axios
+Esta librería se utiliza para realizar llamadas a las funciones serverless desde el bot de telegram. Permite de manera bastante más sencilla y con menos lineas que la librería nativa de node, realizar llamadas a sitios web. En este caso, se utiliza con los métodos GET y POST de html para contactar con las funciones comentadas en los apartados de Netlify y Vercel de este mismo documento.
+
+### Supertest
+Se añade esta librería a las utilizadas para realizar tests al código. Esta permite ejecutar llamadas asíncronas sitios web, de manera similar a la anterior librería pero enfocada precisamente a tests, pues Mocha no permite utilizar Axios (o al menos yo no he encontrado la forma).
