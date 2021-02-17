@@ -5,4 +5,4 @@ lenguaje: Node.js
 test:
   - tests/principal.js
 taskfile: package.json
-URL: https://percepcion-relativa-deportistas.netlify.app/.netlify/functions/rpeSesion?idJugador=123456&fecha=2021/02/16
+URL: https://percepcion-relativa-deportistas.vercel.app/api/rpeSesion?idJugador=123456&fecha=2021/02/16
