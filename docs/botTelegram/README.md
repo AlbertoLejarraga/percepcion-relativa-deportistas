@@ -1,11 +1,11 @@
-# Bot de telegram para cubrir las [HU5](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/8) y [HU3](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/6)
+# Bot de Telegram para cubrir las [HU5](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/8) y [HU3](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/6)
 
-Se ha decidido utilizar un bot de telegram para comunicar a los usuarios con la aplicación, ya que facilitaría mucho a los jugadores contar con un sistema de este estilo para describir cual ha sido el esfuerzo realizado en un entrenamiento, así como al cuerpo técnico para obtener los datos de cada uno de sus jugadores (hasta donde yo se actualmente se hace, bien con una hoja, apuntando a mano, o bien, con una aplicación que exige bastante más que entrar en una conversación de telegram).
+Se ha decidido utilizar un bot de Telegram para comunicar a los usuarios con la aplicación, ya que facilitaría mucho a los jugadores contar con un sistema de este estilo para describir cual ha sido el esfuerzo realizado en un entrenamiento, así como al cuerpo técnico para obtener los datos de cada uno de sus jugadores (hasta donde yo se, actualmente, se hace, bien con un papel y un boli, apuntando a mano, o bien, con una aplicación que exige bastante más que entrar en una conversación de Telegram (las que yo he usado no eran precisamente cómodas)).
 
 ## Configuración
 
 ### BotFather
-En primer lugar, se debe registrar en Telegram que se va a desarrollar un bot, de manera que se obtiene un token para utilizar en dicho bot, y que será mediante lo cual se vayan recibiendo las peticiones (en el caso de webhook) o se vayan solicitando las peticiones realizadas (en el caso de polling). Aquí muestro la parte final de la conversación hasta obtener el token :
+En primer lugar, se debe registrar en Telegram que se va a desarrollar un bot, de manera que se obtiene un token para utilizar en dicho bot, y que será mediante lo cual se vayan recibiendo las peticiones (en el caso de webhook) o se vayan solicitando las peticiones realizadas (en el caso de polling). Aquí muestro la parte final de la conversación para obtener el token:
 
 >BotFather, [15.02.21 23:21]
 
@@ -18,7 +18,7 @@ En primer lugar, se debe registrar en Telegram que se va a desarrollar un bot, d
 ### node-telegram-bot-api
 Se trata de un wraper de la api oficial de Telegram. Debe instalarse con npm, por lo que se introduce en el package.json. Para lo que se ha usado es para, una vez obtenido el token, generar un bot que reciba las peticiones hechas a través de la conversación con "prd2021_bot" y emita una respuesta. El código del bot en sí se encuentra [aquí](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/blob/master/botTelegram.js).
 
-Como se puede ver, el bot responde a tres tipos de llamadas, que son /rpeSesion, correspondiente a la HU3 y /nuevorpe a la HU5, y, por último, a todas las demás llamadas que se corresponden con un mensaje de ayuda.
+Como se podrá ver más adelante, el bot responde a tres tipos de llamadas, que son /rpeSesion, correspondiente a la HU3 y /nuevorpe a la HU5, y, por último, a todas las demás llamadas, que se responden con un mensaje de ayuda.
 
 En el siguiente apartado se mostrarán estas llamadas en funcionamiento, aunque antes de pasar a él debe comentarse que se puede lanzar este bot con el comando "npm run bot", al haberlo incluido en el package.json como un script. Para ello habría que tener acceso al token, que yo al ejecutar el bot en local lo tengo en un .env.
 

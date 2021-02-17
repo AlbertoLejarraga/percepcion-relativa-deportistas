@@ -46,6 +46,9 @@ Los [issues cerrados](https://github.com/AlbertoLejarraga/percepcion-relativa-de
 - [Clase del modelo](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/blob/master/src/model.js)
 - [Resto de ficheros fuente](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/src)
 - [Ficheros de test](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/tests)
+- [Funciones serverless netlify](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/netlify/functions)
+- [Funciones serverless vercel](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/api)
+- [Bot de telegram](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/blob/master/botTelegram.js)
 
 ## Documentación
 En la [carpeta docs](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/) aparece toda la documentación explicativa del proyecto, así como de los distintos [pasos](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/pasos.md) realizados y las [herramientas](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/docs/herramientas.md) utilizadas en su desarrollo.
