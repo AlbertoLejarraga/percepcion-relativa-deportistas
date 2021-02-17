@@ -240,3 +240,49 @@ describe('Clase model', function(){
     });
   });
 });
+//test funcion vercel
+var supertest = require("supertest")("https://percepcion-relativa-deportistas.vercel.app/api/rpeSesion")
+describe('Función rpeSesion Vercel', function(){
+  describe('Se obtiene un rpe correcto para datos que están en la bd', function(){
+    it('Devuelve un documento correcto', async function(){
+      var response = await supertest.get(`?idJugador=123456&fecha=2021/02/17&turno=m`)
+      expect(response.status).to.be.equal(200);
+      expect(response.text).to.be.equal('{"idJugador":"123456","fecha":"17/2/2021 10:28:56","turno":"m","valor":6}')
+    });
+  });
+  describe('Se obtiene una string si no existe un dato solicitado', function(){
+    it('Devuelve una string correcta', async function(){
+      var response = await supertest.get(`?idJugador=123456&fecha=2031/02/17&turno=m`)
+      expect(response.status).to.be.equal(200);
+      expect(response.text).to.be.equal('"No existe encuesta para ese jugador/día/turno"')
+    });
+  });
+  describe('Se obtiene -1 si se solicita sin parámetros', function(){
+    it('Devuelve una string correcta', async function(){
+      var response = await supertest.get(``)
+      expect(response.status).to.be.equal(200);
+      expect(response.text).to.be.equal('-1')
+    });
+  });
+});
+//test funcion netlify
+var supertest1 = require("supertest")("https://percepcion-relativa-deportistas.netlify.app/.netlify/functions/nuevoRpe")
+describe('Función nuevoRPE', function(){
+  describe('Se mandan datos correctos', function(){
+    it('Devuelve un documento correcto', async function(){
+      this.timeout(10000);
+      var response = await supertest1.post("").send('{"idJugador":"idBorrarTest", "rpeSesion":4}')
+      expect(response.status).to.be.equal(200);
+      expect(response.text).to.be.a("string").to.include("idBorrarTest")
+    });
+  });
+  describe('Se mandan datos incorrectos', function(){
+    it('Se obtiene una string al mandar datos erroneos o incompletos', async function(){
+      this.timeout(10000);
+      var response = await supertest1.post("").send('{"erroneo":"idBorrarTest", "rpeSesion":4}')
+      expect(response.status).to.be.equal(200);
+      expect(response.text).to.be.a("string").to.include("idJugador")
+    });
+  });
+
+});
