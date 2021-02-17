@@ -65,3 +65,16 @@ Además de este como sistema de ci adicional, he estado estudiando también otro
 Además, he estado probando también la posibilidad de, con las Actions open source que ya están subidas, ejecutar el código directamente en Node.js, y hacerlo, al igual que con travis, en distintas versiones, aunque me ha parecido innecesario al hacer ya esto en la citada plataforma. Por último, comentar también que se utiliza Ubuntu como sistema en el que ejecutar la Action, pero que se podría ejecutar también en Windows Server y/o macOS si fuera necesario, aunque yo no lo he considerado así al ejecutarse el código, en realidad, en el interior de un contenedor Podman basado en Alpine, y por tanto, ser independiente, en principio, del sistema operativo del host.
 
 ## Hito 5
+
+### MongoDB Atlas
+Como ya se explicó más arriba en este documento (para los primeros hitos) la base de datos que iba a utilizarse era MongoDB. Esta puede instalarse también en local, pero he decidido tomar la opción de su instalación en un clúster en la nube.
+
+Esto es así porque debido a que se necesitaba acceder a la base de datos con funciones serverless desplegadas también en la nube, lo más sencillo era utilizar uno de estos clúster gratuitos de los que provee la plataforma. Su configuración inicial puede consultarse en [esta documentación](xxxxx).
+
+La otra opción era realizar una instalación en local y acceder a ella utilizando software como MongoDB Compass o directamente desde la línea de órdenes, pero hubiera sido mucho más costoso de acceder desde el exterior, como por ejemplo, desde las funciones serverless.
+
+
+### Telegram
+
+
+### Axios
