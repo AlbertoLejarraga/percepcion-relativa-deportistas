@@ -20,5 +20,5 @@ module.exports = async (req, res) => {
     resul = await ( Object.prototype.toString.call(rpeResul) === "[object Rpe]" ? rpeResul.as_dict() : rpeResul);
   }
   //se devuelve el resultado que se haya obtenido o -1
-  await res.status(200).json(resul) + "\n"
+  await res.status(200).send(JSON.stringify(resul) + "\n")
 }
