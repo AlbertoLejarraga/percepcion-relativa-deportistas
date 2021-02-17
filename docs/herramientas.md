@@ -73,6 +73,10 @@ Esto es así porque debido a que se necesitaba acceder a la base de datos con fu
 
 La otra opción era realizar una instalación en local y acceder a ella utilizando software como MongoDB Compass o directamente desde la línea de órdenes, pero hubiera sido mucho más costoso de acceder desde el exterior, como por ejemplo, desde las funciones serverless.
 
+### Dotenv
+Este módulo de npm permite cargar las variables de entorno de un fichero .env directamente en el "process.env". En este caso, se ha utilizado para alguno de los desarrollos en local, ya que hace transparente el uso de este variables de entorno, ya sea en los casos en los que esté presente un .env o en aquellos en los que directamente se coja la variable de las variables de entorno que proveen los distintos sistemas (Github, Travis, Vercel, Netlify, etc.). Hasta el momento de escribir esta documentación, se ha utilizado tanto para obtener la uri de conexión a la base de datos como para obtener el token del bot de telegram.
+
+
 
 ### Telegram
 
