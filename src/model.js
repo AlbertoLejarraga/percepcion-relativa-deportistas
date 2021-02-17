@@ -81,6 +81,13 @@ class Model{
     }
 
   }
+  //HU 7: eLIMINAR Rpe
+  async eliminarRpe(_id){
+    let rpe = await this._db.collection("rpe")
+    let resul = await rpe.deleteOne({_id:{$eq: _id}})
+    return ((resul.deletedCount === 1) ? 1 : -1);
+  }
+
   obtenerWellnessDia(idJugador, fecha){
     //se obtiene de la bbdd los valroes para ese jugador y fecha
     //de momento valores aleatorios
@@ -106,7 +113,9 @@ class Model{
     //Fnción que añade una encuesta a la bbdd
     // de momento siempre correcto
     return true
-
+  }
+  eliminarWellness(_id){
+    return 1
   }
 }
 module.exports = {

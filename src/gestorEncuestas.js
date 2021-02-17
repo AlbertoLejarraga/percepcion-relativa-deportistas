@@ -53,6 +53,12 @@ class GestorEncuestas{
     }
     return "Fecha o turno incorrectos"
   }
+  //HU7: Eliminar encuesta wellness
+  async eliminarRpe(_id){
+    return this._model.eliminarRpe(_id)
+  }
+
+
   /////////////////////////////////////////////// WELLNESS ////////////////////////////////
   // HU1: Wellness de un día
   obtenerWellnessDia(idJugador, fecha){
@@ -96,6 +102,10 @@ class GestorEncuestas{
     let encuesta = new rpe.Rpe()
     encuesta.rellenarEncuesta(idJugador, fecha, fatiga, danoMuscular, calidadSueno, nutricionHidratacion, estadoEmocional)
     return this._model.addWellness(encuesta.as_dict())
+  }
+  //HU8: Eliminar encuesta wellness
+  eliminarWellness(_id){
+    return this._model.eliminarWellness(_id)
   }
 
 }
