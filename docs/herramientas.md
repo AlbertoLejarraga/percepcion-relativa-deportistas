@@ -69,7 +69,7 @@ Además, he estado probando también la posibilidad de, con las Actions open sou
 ### MongoDB Atlas
 Como ya se explicó más arriba en este documento (para los primeros hitos) la base de datos que iba a utilizarse era MongoDB. Esta puede instalarse también en local, pero he decidido tomar la opción de su instalación en un clúster en la nube.
 
-Esto es así porque debido a que se necesitaba acceder a la base de datos con funciones serverless desplegadas también en la nube, lo más sencillo era utilizar uno de estos clúster gratuitos de los que provee la plataforma. Su configuración inicial puede consultarse en [esta documentación](xxxxx).
+Esto es así porque debido a que se necesitaba acceder a la base de datos con funciones serverless desplegadas también en la nube, lo más sencillo era utilizar uno de estos clúster gratuitos de los que provee la plataforma. Su configuración inicial puede consultarse en [esta documentación](xxxxxxxxxxxxxxxxxxxxxxxxxxxxx).
 
 La otra opción era realizar una instalación en local y acceder a ella utilizando software como MongoDB Compass o directamente desde la línea de órdenes, pero hubiera sido mucho más costoso de acceder desde el exterior, como por ejemplo, desde las funciones serverless.
 
