@@ -76,6 +76,21 @@ La otra opción era realizar una instalación en local y acceder a ella utilizan
 ### Dotenv
 Este módulo de npm permite cargar las variables de entorno de un fichero .env directamente en el "process.env". En este caso, se ha utilizado para alguno de los desarrollos en local, ya que hace transparente el uso de este variables de entorno, ya sea en los casos en los que esté presente un .env o en aquellos en los que directamente se coja la variable de las variables de entorno que proveen los distintos sistemas (Github, Travis, Vercel, Netlify, etc.). Hasta el momento de escribir esta documentación, se ha utilizado tanto para obtener la uri de conexión a la base de datos como para obtener el token del bot de telegram.
 
+### Vercel
+Vercel es una de las opciones que podía tenerse en cuenta para el despliegue de funciones serverless, ya que proveía de un servicio gratuito para el despliegue de este tipo de aplicaciones. Había otros servicios posibles pero se han ido descartando por distintos motivos. Algunos no son técnicos, como la necesidad de registrar una tarjeta de crédito en AWSLambda o en Azure Functions incluso en su versión gratuita. También se ha probado Cloud Functions for Firebase, que se ha descartado porque alguna de las funciones que se veían necesarias no eran gratuitas, además de cargar el repositorio con muchos ficheros solo necesarios para el despliegue en local para el desarrollo, cosa que no hacen los demás proveedores.
+
+Por todo esto, entre otras cosas, se ha decidido utilizar tanto Vercel como Netlify para el despliegue de dos aplicaciones serverless. Las desarrolladas con vercel se encuentran en [esta carpeta](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/api), siendo la función de este hito (y la utilizada por el bot de telegram) la de "rpeSesion", que permite obtener el rpe determinado por un jugador en una fecha concreta ([HU3](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/6)).
+
+Esta función es accesible desde [aquí](https://percepcion-relativa-deportistas.vercel.app/api/rpeSesion?idJugador=123456&fecha=2021/02/16), con los parámetros pasados en la url.
+
+### Netlify
+Este es otro servicio que permite el despliegue de manera gratuita, en un principio, de funciones serverless, pero me remito al apartado anterior para su selección como tecnología a utilizar.
+
+En cuanto al proyecto, se han desarrollado las funciones que se encuentran [aquí](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/tree/master/netlify/functions), entre las que están una función de prueba, una función réplica de la generada en Vercel sobre la obtención del rpe de una sesión y que se ha utilizado para ir aprendiendo como funcionaba técnicamente esta solución y, por último, la de nuevoRpe, que permite establecer un nuevo valor de rpe para una sesión ([HU5](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/issues/8)).
+
+Estas funciones son accesibles desde estos enlaces:
+  - [rpeSesion](https://percepcion-relativa-deportistas.netlify.app/.netlify/functions/rpeSesion?idJugador=123456&fecha=2021/02/16) con parámetros idJugador y fecha
+  - [nuevoRpe](https://percepcion-relativa-deportistas.netlify.app/.netlify/functions/nuevoRpe) con parámetros de inserción pasados por POST.
 
 
 ### Telegram
