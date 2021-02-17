@@ -29,7 +29,7 @@ telegram.on("text", (message) => {
       telegram.sendMessage(message.chat.id, "Algún dato es erróneo, consulta /ayuda")
     }
   } else if (message.text.toLowerCase().indexOf("/rpesesion") === 0){//para consulta de rpe de una sesión
-    //se obtiene los datos
+    //se obtiene los datos 
     let fecha = message.text.split(" ")[1]
     let turno = message.text.split(" ")[2] || "m"
     let idJugador = message.text.split(" ")[3] || message.from.id.toString()
