@@ -69,7 +69,7 @@ Además, he estado probando también la posibilidad de, con las Actions open sou
 ### MongoDB Atlas
 Como ya se explicó más arriba en este documento (para los primeros hitos) la base de datos que iba a utilizarse era MongoDB. Esta puede instalarse también en local, pero he decidido tomar la opción de su instalación en un clúster en la nube.
 
-Esto es así porque debido a que se necesitaba acceder a la base de datos con funciones serverless desplegadas también en la nube, lo más sencillo era utilizar uno de estos clúster gratuitos de los que provee la plataforma. Su configuración inicial puede consultarse en [esta documentación](xxxxxxxxxxxxxxxxxxxxxxxxxxxxx).
+Esto es así porque debido a que se necesitaba acceder a la base de datos con funciones serverless desplegadas también en la nube, lo más sencillo era utilizar uno de estos clúster gratuitos de los que provee la plataforma. Su configuración inicial puede consultarse en [esta documentación](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/blob/master/docs/configuracionMongo/README.md).
 
 La otra opción era realizar una instalación en local y acceder a ella utilizando software como MongoDB Compass o directamente desde la línea de órdenes, pero hubiera sido mucho más costoso de acceder desde el exterior, como por ejemplo, desde las funciones serverless.
 
@@ -83,6 +83,8 @@ Por todo esto, entre otras cosas, se ha decidido utilizar tanto Vercel como Netl
 
 Esta función es accesible desde [aquí](https://percepcion-relativa-deportistas.vercel.app/api/rpeSesion?idJugador=123456&fecha=2021/02/16), con los parámetros pasados en la url.
 
+Por último, comentar que se ha conectado el repositorio de GitHub con esta plataforma para continuar con el método de integración continua iniciado en hitos anteriores, como puede comprobarse en uno de los [ejercicios del tema](https://github.com/AlbertoLejarraga/Autoevaluacion-IV-2020/blob/main/Semana%208_9-Serverless/Ejercicio%203/README.md)
+
 ### Netlify
 Este es otro servicio que permite el despliegue de manera gratuita, en un principio, de funciones serverless, pero me remito al apartado anterior para su selección como tecnología a utilizar.
 
@@ -93,6 +95,8 @@ Estas funciones son accesibles desde estos enlaces:
   - [nuevoRpe](https://percepcion-relativa-deportistas.netlify.app/.netlify/functions/nuevoRpe) con parámetros de inserción pasados por POST.
 
 En cuanto a estos dos servicios, se han testeado las correspondientes a las historias de usuario (la de rpeSesion de netlify no, al considerarse solo de prueba).
+
+Por último, al igual que en Vercel se ha conectado al repositorio de GitHub para el despliegue automático de las aplicaciones, como muestra [esta imagen](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/blob/master/docs/img/netlify_ci.png)
 
 ### Telegram
 El servicio de mensajería telegram permite desplegar bots que realicen ciertas funciones. En este caso, se ha utilizado como un sistema que permita acceder a las funciones serverless desarrolladas con las dos tecnologías anteriores. Para ello se han seguido una serie de pasos que pueden encontrarse en [esta documentación](https://github.com/AlbertoLejarraga/percepcion-relativa-deportistas/blob/master/docs/botTelegram/README.md).
