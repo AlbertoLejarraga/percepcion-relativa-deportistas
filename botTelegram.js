@@ -16,11 +16,11 @@ telegram.on("text", (message) => {
     if (idJugador && rpeSesion>0 && rpeSesion<=10 && (turno === "m" || turno === "t")){
       //se genera la petición post a la serverless de netlify
       axios.post("https://percepcion-relativa-deportistas.netlify.app/.netlify/functions/nuevoRpe",
-        {idJugador: idJugador, rpeSesion: rpeSesion, turno: turno}
+        {"idJugador": idJugador, "rpeSesion": rpeSesion, "turno": turno}
       )
         .then(res => {//se devuelve la respuesta
           console.log(res)
-          telegram.sendMessage(message.chat.id, res.data)
+          telegram.sendMessage(message.chat.id, JSON.stringify(res.data))
         })
         .catch(error => {
           console.error(error)
@@ -29,7 +29,7 @@ telegram.on("text", (message) => {
       telegram.sendMessage(message.chat.id, "Algún dato es erróneo, consulta /ayuda")
     }
   } else if (message.text.toLowerCase().indexOf("/rpesesion") === 0){//para consulta de rpe de una sesión
-    //se obtiene los datos 
+    //se obtiene los datos
     let fecha = message.text.split(" ")[1]
     let turno = message.text.split(" ")[2] || "m"
     let idJugador = message.text.split(" ")[3] || message.from.id.toString()
