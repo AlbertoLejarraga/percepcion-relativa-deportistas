@@ -287,5 +287,4 @@ describe('Función nuevoRPE', function(){
       expect(response.text).to.be.a("string").to.include("idJugador")
     });
   });
-
 });
